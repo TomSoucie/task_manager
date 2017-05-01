@@ -1,4 +1,4 @@
-require_relative "../models/task"
+require_relative '../models/task'
 
 class TaskManagerApp < Sinatra:: Base
   set :root, File.expand_path("..", __dir__)
@@ -17,7 +17,6 @@ class TaskManagerApp < Sinatra:: Base
   end
 
   post '/tasks' do
-    # "<p>Params: #{params}</p> <p>Task params: #{params[:task]}</p>"
     task = Task.new(params[:task])
     task.save
     redirect '/tasks'
