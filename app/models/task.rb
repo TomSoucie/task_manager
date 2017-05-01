@@ -1,8 +1,10 @@
 require 'sqlite3'
 
 class Task
+
   attr_reader :title, :description, :id
-    def intialize(task_params)
+  
+  def initialize(task_params)
       @description = task_params["description"]
       @title = task_params["title"]
       @database = SQLite3::Database.new('db/task_manager_development.db')
