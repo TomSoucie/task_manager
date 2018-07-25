@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 require_relative '../models/task'
 
 class TaskManagerApp < Sinatra:: Base
-=======
-class TaskManagerApp < Sinatra::Base
->>>>>>> vulnerability
   set :root, File.expand_path("..", __dir__)
 
   get '/' do
     erb :dashboard
-<<<<<<< HEAD
-  end 
+  end
 
   get '/tasks' do
     @tasks = Task.all
@@ -31,18 +26,17 @@ class TaskManagerApp < Sinatra::Base
     @task = Task.find(params[:id])
     erb :show
   end
-end 
+end
 =======
   end
 
   get '/tasks' do
     @tasks = ["Cleaning", "Homework", "Workout"]
     erb :tasks
-  end 
+  end
 
   post '/tasks' do
     #when we want to SEND information to the server
   end
 
 end
->>>>>>> vulnerability
